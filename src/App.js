@@ -21,11 +21,12 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
       <h1>Search filter</h1>
+      <h3>Type the fruit you want to search</h3>
       <input onChange={handleList}/>
       {filteredList && filteredList.map((item,index)=>(
-        <div key={index}>{item}</div>
+        <div key={index} className='list-item'>{item}</div>
       ))}
     </div>
   );
